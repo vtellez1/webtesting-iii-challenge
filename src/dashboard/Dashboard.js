@@ -14,13 +14,18 @@ class Dashboard extends React.Component {
 
     return (
       <>
+      <div data-testid="displayComponent" >
         <Display locked={locked} closed={closed} />
+      </div>
+      
+      <div data-testid="controlsComponent">
         <Controls
           locked={locked}
           closed={closed}
           toggleLocked={this.toggleLocked}
           toggleClosed={this.toggleClosed}
         />
+        </div>
       </>
     );
   }
